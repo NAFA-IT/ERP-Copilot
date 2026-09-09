@@ -1,0 +1,10 @@
+Vendor,Category,On_Time_Delivery_Rate_Pct,Avg_Delay_Days,Price_Variance_Pct,Open_POs,Risk_Rating
+Alpha Steel Traders,Raw Material,68,9,4.5,2,High
+Bearings Corp,Spare Parts,91,1,1.2,2,Low
+HydroSeal Ltd,Spare Parts,74,6,2.8,2,Medium
+Karachi Lubricants Co,Consumables,95,0,0.5,0,Low
+SafeGuard Supplies,Safety Equipment,63,11,3.9,2,High
+PolyPipe Industries,Raw Material,82,3,1.9,2,Medium
+BeltWorks Pvt Ltd,Spare Parts,55,14,6.2,1,High
+WeldPro Traders,Consumables,97,0,0.8,0,Low
+ValveTech Systems,Spare Parts,70,8,3.3,2,Medium

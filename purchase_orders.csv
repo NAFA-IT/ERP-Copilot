@@ -1,0 +1,16 @@
+PO_ID,Vendor,Item,Category,Qty_Ordered,Order_Date,Expected_Delivery,Status,Amount_USD,Approval_Stage
+PO-1001,Alpha Steel Traders,Steel Coil 2mm,Raw Material,300,2026-08-01,2026-08-20,Overdue,54000,Approved
+PO-1002,Bearings Corp,Industrial Bearings,Spare Parts,200,2026-08-10,2026-09-05,In Transit,9000,Approved
+PO-1003,HydroSeal Ltd,Hydraulic Pump Seal,Spare Parts,100,2026-08-15,2026-09-15,Pending Approval,12000,Awaiting Manager
+PO-1004,Karachi Lubricants Co,Lubricant Oil 20L,Consumables,150,2026-08-20,2026-09-01,Delivered,9750,Closed
+PO-1005,SafeGuard Supplies,Safety Helmets,Safety Equipment,300,2026-08-05,2026-08-25,Overdue,4500,Approved
+PO-1006,PolyPipe Industries,PVC Pipe 4in,Raw Material,500,2026-08-25,2026-09-12,In Transit,14000,Approved
+PO-1007,BeltWorks Pvt Ltd,Conveyor Belt,Spare Parts,10,2026-07-28,2026-08-28,Overdue,9000,Approved
+PO-1008,Bearings Corp,Diesel Filter,Spare Parts,250,2026-08-28,2026-09-10,Pending Approval,5500,Awaiting Finance
+PO-1009,WeldPro Traders,Welding Rods,Consumables,600,2026-08-18,2026-08-30,Delivered,4800,Closed
+PO-1010,ValveTech Systems,Control Valve Assembly,Spare Parts,20,2026-07-25,2026-08-22,Overdue,13000,Approved
+PO-1011,SafeGuard Supplies,Nitrile Gloves (box),Safety Equipment,400,2026-08-22,2026-09-05,In Transit,3600,Approved
+PO-1012,Alpha Steel Traders,Copper Wire 10mm,Raw Material,200,2026-08-30,2026-09-20,Pending Approval,7000,Awaiting Manager
+PO-1013,HydroSeal Ltd,Gasket Set,Spare Parts,80,2026-08-12,2026-09-08,In Transit,2400,Approved
+PO-1014,PolyPipe Industries,Industrial Paint 5L,Consumables,60,2026-08-27,2026-09-10,Pending Approval,2520,Awaiting Finance
+PO-1015,ValveTech Systems,Fire Extinguisher,Safety Equipment,50,2026-08-14,2026-08-29,Overdue,2750,Approved
