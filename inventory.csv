@@ -1,0 +1,16 @@
+Item,Category,Current_Stock,Reorder_Point,Avg_Daily_Usage,Lead_Time_Days,Unit_Cost_USD,Warehouse
+Steel Coil 2mm,Raw Material,420,500,35,12,180,WH-Karachi-1
+Industrial Bearings,Spare Parts,90,150,8,20,45,WH-Karachi-2
+Hydraulic Pump Seal,Spare Parts,25,60,4,25,120,WH-Lahore-1
+Lubricant Oil 20L,Consumables,310,200,18,7,65,WH-Karachi-1
+Safety Helmets,Safety Equipment,180,100,6,10,15,WH-Karachi-2
+PVC Pipe 4in,Raw Material,60,250,22,15,28,WH-Lahore-1
+Conveyor Belt,Spare Parts,12,20,1,30,900,WH-Karachi-1
+Diesel Filter,Spare Parts,150,120,9,14,22,WH-Karachi-2
+Welding Rods,Consumables,700,400,40,9,8,WH-Lahore-1
+Control Valve Assembly,Spare Parts,8,15,1,35,650,WH-Karachi-1
+Nitrile Gloves (box),Safety Equipment,240,150,12,7,9,WH-Karachi-2
+Copper Wire 10mm,Raw Material,95,180,14,18,35,WH-Lahore-1
+Fire Extinguisher,Safety Equipment,40,25,1,20,55,WH-Karachi-1
+Gasket Set,Spare Parts,18,40,3,22,30,WH-Karachi-2
+Industrial Paint 5L,Consumables,55,80,5,11,42,WH-Lahore-1
