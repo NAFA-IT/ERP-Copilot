@@ -89,9 +89,9 @@ st.sidebar.caption(
     "Paste published-CSV links from your Google Sheet (File → Share → "
     "Publish to web → CSV), one per table. Leave blank to use bundled sample data."
 )
-po_source = st.sidebar.text_input("Purchase Orders sheet URL", value="")
-inv_source = st.sidebar.text_input("Inventory sheet URL", value="")
-ven_source = st.sidebar.text_input("Vendors sheet URL", value="")
+po_source = st.sidebar.text_input("Purchase Orders sheet URL", value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQz5f272npS7Kt_E70WobjWirTSZavZEWOx2HW4njYbud23vKzg6H7imv_Ygmhq9iDY96CMQaeAy13G/pub?gid=1893128557&single=true&output=csv")
+inv_source = st.sidebar.text_input("Inventory sheet URL", value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQz5f272npS7Kt_E70WobjWirTSZavZEWOx2HW4njYbud23vKzg6H7imv_Ygmhq9iDY96CMQaeAy13G/pub?gid=1103151139&single=true&output=csv")
+ven_source = st.sidebar.text_input("Vendors sheet URL", value="https://docs.google.com/spreadsheets/d/e/2PACX-1vQz5f272npS7Kt_E70WobjWirTSZavZEWOx2HW4njYbud23vKzg6H7imv_Ygmhq9iDY96CMQaeAy13G/pub?gid=1205952954&single=true&output=csv")
 
 if st.sidebar.button("🔄 Refresh data"):
     st.cache_data.clear()
