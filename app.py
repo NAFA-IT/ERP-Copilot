@@ -98,11 +98,12 @@ if st.sidebar.button("🔄 Refresh data"):
 
 st.sidebar.header("🤖 AI assistant")
 api_key = st.sidebar.text_input(
-    "Anthropic API key", value=os.environ.get("ANTHROPIC_API_KEY", ""), type="password"
+    "Gemini API key", value=os.environ.get("GEMINI_API_KEY", ""), type="password"
 )
 st.sidebar.caption(
-    "Optional. Without a key the dashboard still shows every computed risk "
-    "signal — you just won't get the AI-written briefing or chat answers."
+    "Free — get a key at [aistudio.google.com/apikey](https://aistudio.google.com/apikey). "
+    "Without a key the dashboard still shows every computed risk signal — "
+    "you just won't get the AI-written briefing or chat answers."
 )
 
 # --------------------------------------------------------------------------
@@ -219,17 +220,16 @@ st.divider()
 # --------------------------------------------------------------------------
 st.subheader("📋 AI priority briefing")
 
-def call_claude(system_prompt: str, user_prompt: str, api_key: str) -> str:
-    import anthropic
+def call_llm(system_prompt: str, user_prompt: str, api_key: str) -> str:
+    import google.generativeai as genai
 
-    client = anthropic.Anthropic(api_key=api_key)
-    resp = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=700,
-        system=system_prompt,
-        messages=[{"role": "user", "content": user_prompt}],
+    genai.configure(api_key=api_key)
+    model = genai.GenerativeModel(
+        model_name="gemini-2.0-flash",
+        system_instruction=system_prompt,
     )
-    return "".join(block.text for block in resp.content if block.type == "text")
+    resp = model.generate_content(user_prompt)
+    return resp.text
 
 
 SYSTEM_PROMPT = (
@@ -249,13 +249,13 @@ with briefing_col:
         if priority_df.empty:
             st.info("No risk signals detected in the current data — nothing to escalate today.")
         elif not api_key:
-            st.warning("Add an Anthropic API key in the sidebar to generate the AI-written briefing.")
+            st.warning("Add a free Gemini API key in the sidebar to generate the AI-written briefing.")
             st.dataframe(priority_df, use_container_width=True, hide_index=True)
         else:
             with st.spinner("Thinking..."):
                 data_context = priority_df.to_csv(index=False)
                 try:
-                    briefing = call_claude(
+                    briefing = call_llm(
                         SYSTEM_PROMPT,
                         f"Risk signals as of {TODAY}:\n{data_context}\n\nWrite the briefing.",
                         api_key,
@@ -275,7 +275,7 @@ with chat_col:
     )
     if st.button("Ask"):
         if not api_key:
-            st.warning("Add an Anthropic API key in the sidebar to ask questions.")
+            st.warning("Add a free Gemini API key in the sidebar to ask questions.")
         else:
             with st.spinner("Thinking..."):
                 context = (
@@ -284,7 +284,7 @@ with chat_col:
                     "\nVENDORS:\n" + ven_risk.to_csv(index=False)
                 )
                 try:
-                    answer = call_claude(
+                    answer = call_llm(
                         SYSTEM_PROMPT,
                         f"Data as of {TODAY}:\n{context}\n\nQuestion: {question}\n"
                         "Answer using only this data; say so if it isn't answerable from it.",

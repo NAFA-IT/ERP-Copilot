@@ -22,11 +22,6 @@ the most delays this month?") and get answers grounded only in the live data.
    can be submitted as your public dataset link.
 5. Paste the three published CSV URLs into the app's sidebar.
 
-Published Links:
-Purchased Order: https://docs.google.com/spreadsheets/d/e/2PACX-1vQz5f272npS7Kt_E70WobjWirTSZavZEWOx2HW4njYbud23vKzg6H7imv_Ygmhq9iDY96CMQaeAy13G/pub?gid=1893128557&single=true&output=csv
-Inventory: https://docs.google.com/spreadsheets/d/e/2PACX-1vQz5f272npS7Kt_E70WobjWirTSZavZEWOx2HW4njYbud23vKzg6H7imv_Ygmhq9iDY96CMQaeAy13G/pub?gid=1103151139&single=true&output=csv
-Vendors: https://docs.google.com/spreadsheets/d/e/2PACX-1vQz5f272npS7Kt_E70WobjWirTSZavZEWOx2HW4njYbud23vKzg6H7imv_Ygmhq9iDY96CMQaeAy13G/pub?gid=1205952954&single=true&output=csv
-
 (The bundled CSVs in `data/` are synthetic and safe to publish — no real
 company data.)
 
@@ -35,8 +30,10 @@ company data.)
 pip install -r requirements.txt
 streamlit run app.py
 ```
-Open the sidebar and add your Anthropic API key to enable the AI briefing
-and chat (the dashboard and risk tables work without one).
+Get a **free** Gemini API key at
+[aistudio.google.com/apikey](https://aistudio.google.com/apikey) (no
+billing required for the free tier) and paste it in the sidebar to enable
+the AI briefing and chat. The dashboard and risk tables work without one.
 
 ## 3. Deploy for a public prototype link
 Push this folder to a public GitHub repo, then on
@@ -44,7 +41,7 @@ Push this folder to a public GitHub repo, then on
 1. "New app" → pick the repo → main file `app.py` → Deploy.
 2. In app settings → **Secrets**, add:
    ```toml
-   ANTHROPIC_API_KEY = "sk-ant-..."
+   GEMINI_API_KEY = "AIza..."
    ```
 3. Share the generated `*.streamlit.app` URL as your prototype link.
 
